@@ -1,0 +1,22 @@
+{
+  "name": "passworder",
+  "version": "0.0.1",
+  "private": true,
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "tsc -p tsconfig.json"
+  },
+  "files": [
+    "src",
+    "tsconfig.json"
+  ],
+  "dependencies": {
+    "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.3",
+    "typescript-eslint-parser": "^22.0.0"
+  }
+}
