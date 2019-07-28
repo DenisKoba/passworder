@@ -8,7 +8,7 @@ import {
 
 
 
-class Passworder implements PassworderInterface{
+export class Passworder implements PassworderInterface {
   warning: string = ''
   status: boolean = false
   charset: string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&*+?@~"
@@ -32,6 +32,7 @@ class Passworder implements PassworderInterface{
   }
 
   checkLength(password: string): CommonType {
+    console.log(this, password)
     if (password.length <= 8) {
       this.warning = 'The password is to short'
       this.status = false

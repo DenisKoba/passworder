@@ -6,17 +6,24 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "postinstall": "npm run build",
-    "build": "tsc -p tsconfig.json"
+    "watch": "babel --watch src ---out-dir lib --extensions '.ts,.tsx'",
+    "build": "babel src --out-dir lib --extensions '.ts,.tsx'",
+    "tsc": "tsc"
   },
   "files": [
     "src",
     "tsconfig.json"
   ],
   "dependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
     "typescript": "^3.4.5"
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "typescript-eslint-parser": "^22.0.0"
   }
 }

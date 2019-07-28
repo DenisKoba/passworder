@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "esnext",
     "declaration": true,
     "outDir": "./dist",
     "strict": true,
     "incremental": true,
+    "allowJs": true,
+    "noEmit": true,
     "moduleResolution": "node",
     "strictNullChecks": false,
     "strictPropertyInitialization": false,
@@ -15,16 +17,18 @@
     "sourceMap": true,
     "noImplicitAny": false,
     "preserveConstEnums": false,
+    "esModuleInterop": true,
+    "jsx": "react",
     "lib": [
       "dom",
       "esnext"
     ]
   },
   "include": [
-    "src/**/*"
+    "src/**/*.ts",
+    "src/**/*.tsx",
   ],
   "exclude": [
-    "src/**/*.spec.*",
     "node_modules"
   ]
 }
