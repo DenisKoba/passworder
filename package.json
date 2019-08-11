@@ -1,12 +1,11 @@
 {
   "name": "passworder",
   "version": "0.0.1",
-  "private": true,
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
     "postinstall": "npm run build",
-    "build": "babel src --out-dir lib --extensions '.ts,.tsx'",
+    "build": "babel src --out-dir lib --extensions '.ts'",
     "webpack": "webpack --mode=production"
   },
   "files": [
