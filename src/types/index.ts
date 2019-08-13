@@ -34,6 +34,6 @@ export interface ValidationMethodsInterface {
 
 export interface ChainInterface {
   value: string | boolean
-  next(fn: () => void): ChainInterface
+  next(fn: any): ChainInterface
 }
 

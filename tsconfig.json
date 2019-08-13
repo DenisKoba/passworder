@@ -1,16 +1,26 @@
 {
   "compilerOptions": {
-    "outDir": "./lib",
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "commonjs",
     "target": "es5",
-    "jsx": "react",
-    "allowJs": true
+    "module": "esnext",
+    "declaration": true,
+    "outDir": "./lib",
+    "strict": true,
+    "incremental": true,
+    "moduleResolution": "node",
+    "strictNullChecks": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "preserveConstEnums": false,
+    "lib": [
+      "dom",
+      "esnext"
+    ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
+    "src/**/*"
   ],
   "exclude": [
     "node_modules"

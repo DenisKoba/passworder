@@ -9,7 +9,7 @@ import ValidationMethods from './ValidationMethods'
 
 
 export class Passworder extends ValidationMethods implements PassworderInterface {
-  charset: string = CHARSET
+  readonly charset: string = CHARSET
 
   constructor() {
     super()
