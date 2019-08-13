@@ -15,11 +15,15 @@ export class Passworder extends ValidationMethods implements PassworderInterface
     super()
   }
 
-  generate(length: number = DEFAULT_PASSWORD_LENGTH): string {
+  generate(length: number): string {
+    const filteredLength = length < DEFAULT_PASSWORD_LENGTH ? DEFAULT_PASSWORD_LENGTH : length
+
     let value = ''
-    for (let i = 0, n = this.charset.length; i < length; ++i) {
+
+    for (let i = 0, n = this.charset.length; i < filteredLength; ++i) {
       value += this.charset.charAt(Math.floor(Math.random() * n))
     }
+
     return value
   }
 

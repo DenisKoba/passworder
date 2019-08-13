@@ -8,7 +8,7 @@ export type CommonType = string | boolean
 export interface PassworderInterface {
   charset: string
 
-  generate(): string
+  generate(length: number): string
 
   validate(password: string): ValidationValue
 }
