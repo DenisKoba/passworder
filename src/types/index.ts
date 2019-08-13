@@ -1,6 +1,3 @@
-import {DEFAULT_PASSWORD_LENGTH, REG_EXP_DIGITS, REG_EXP_UPPER_CASE} from '../consts'
-import chain from '../helpers/chain'
-
 export type ValidationValue = {
   status: boolean
   warning: string
@@ -9,17 +6,26 @@ export type ValidationValue = {
 export type CommonType = string | boolean
 
 export interface PassworderInterface {
-  warning: string
-  status: boolean
   charset: string
 
   generate(): string
 
   validate(password: string): ValidationValue
+}
+
+export interface ValidationMethodsInterface {
+  warning: string
+  status: boolean
+  customLengthErrorMessage: string
+  customDigitErrorMessage: string
+  customUppercaseErrorMessage: string
+  lengthErrorMessage: string
+  digitErrorMessage: string
+  uppercaseErrorMessage: string
 
   checkLength(password: string): CommonType
 
-  checkStrength(password: CommonType)
+  checkStrength(password: CommonType): any
 
   testForUpperCase(password: string): CommonType
 
@@ -28,7 +34,6 @@ export interface PassworderInterface {
 
 export interface ChainInterface {
   value: string | boolean
-  next(fn): ChainInterface
-
-
+  next(fn: any): ChainInterface
 }
+

@@ -7,13 +7,13 @@ export class Chain implements ChainInterface{
         this.value = data
     }
 
-    next(fn) {
+    next(fn: any) {
         this.value = fn(this.value)
         return this
     }
 }
 
 
-export default function chain(data): ChainInterface {
+export default function chain(data: any): ChainInterface {
     return new Chain(data)
 }
