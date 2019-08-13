@@ -15,7 +15,7 @@ export class Passworder extends ValidationMethods implements PassworderInterface
     super()
   }
 
-  generate(length: number): string {
+  generate(length: number = DEFAULT_PASSWORD_LENGTH): string {
     const filteredLength = length < DEFAULT_PASSWORD_LENGTH ? DEFAULT_PASSWORD_LENGTH : length
 
     let value = ''

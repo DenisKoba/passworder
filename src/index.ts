@@ -1,4 +1,4 @@
-export { default as passworder } from './components/Passworder'
+export { default } from './components/Passworder'
 import passworder from './components/Passworder'
 
 // @ts-ignore

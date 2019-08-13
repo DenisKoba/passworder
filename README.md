@@ -40,3 +40,5 @@ passworder.customLengthErrorMessage = 'your custom length error message'
 passworder.customUppercaseErrorMessage = 'your custom uppercase error message'
 
 ```
+
+github https://github.com/DenisKoba/passworder
