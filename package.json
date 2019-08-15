@@ -1,6 +1,6 @@
 {
   "name": "passworder",
-  "version": "0.0.11",
+  "version": "0.0.13",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
@@ -12,13 +12,11 @@
     "src",
     "tsconfig.json"
   ],
-  "dependencies": {
-    "webpack": "^4.39.1"
-  },
   "devDependencies": {
     "@types/lodash-es": "^4.17.3",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
-    "typescript-eslint-parser": "^22.0.0"
+    "typescript-eslint-parser": "^22.0.0",
+    "webpack": "^4.39.1"
   }
 }

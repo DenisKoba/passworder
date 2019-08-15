@@ -1,4 +1,4 @@
-# PASSWORDER
+# passworder
 
 Easy to use lib for generating and validating passwords.
 
@@ -35,9 +35,9 @@ Use custom warning text
 ```javascript
 import passowrder from 'passworder'
 
-passworder.customDigitErrorMessage = 'your custom digit error message'
-passworder.customLengthErrorMessage = 'your custom length error message'
-passworder.customUppercaseErrorMessage = 'your custom uppercase error message'
+passworder.digitErrorMessage = 'your custom digit error message'
+passworder.lengthErrorMessage = 'your custom length error message'
+passworder.uppercaseErrorMessage = 'your custom uppercase error message'
 
 ```
 
