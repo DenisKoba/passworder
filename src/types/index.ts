@@ -4,6 +4,13 @@ export type ValidationValue = {
 }
 
 export type CommonType = string | boolean
+export type Union = string | number
+
+export type customPasswordResponse = {
+  first: string
+  second: string
+  third: string
+}
 
 export interface PassworderInterface {
   charset: string

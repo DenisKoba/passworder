@@ -41,4 +41,12 @@ passworder.uppercaseErrorMessage = 'your custom uppercase error message'
 
 ```
 
+Generate custom password using words and numbers
+```javascript
+import passowrder from 'passworder'
+
+passworder.generateCustom('Mike', 1977, 'Donovan') // => { first: "Mike1977Donovan", second: "19MikeDonovan77", third: "Donovan1977Mike" }
+
+```
+
 github https://github.com/DenisKoba/passworder

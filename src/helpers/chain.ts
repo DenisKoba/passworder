@@ -1,7 +1,7 @@
-import { ChainInterface } from '../types'
+import { ChainInterface, CommonType } from '../types'
 
 export class Chain implements ChainInterface{
-    value: string | boolean
+    value: CommonType
 
     constructor(data: string) {
         this.value = data

@@ -1,10 +1,16 @@
 import chain from '../helpers/chain'
-import { ValidationValue, PassworderInterface } from '../types'
+import {
+  ValidationValue,
+  PassworderInterface,
+  Union,
+  customPasswordResponse
+} from '../types'
 import {
   DEFAULT_PASSWORD_LENGTH,
   CHARSET,
 } from '../consts'
 import ValidationMethods from './ValidationMethods'
+import { isLetter, toUpperCase, passwordOptions } from '../helpers/common'
 
 
 
@@ -25,6 +31,16 @@ export class Passworder extends ValidationMethods implements PassworderInterface
     }
 
     return value
+  }
+
+  generateCustom(...parameters: Union[]): customPasswordResponse  {
+    const editedParameters = parameters
+      .map((item) => {
+        const string = item.toString()
+        return isLetter(string) ? toUpperCase(string) : string
+      })
+
+    return passwordOptions(editedParameters)
   }
 
   validate(password: string): ValidationValue {
