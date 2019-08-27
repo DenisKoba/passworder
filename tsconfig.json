@@ -3,7 +3,7 @@
     "target": "es5",
     "module": "esnext",
     "declaration": true,
-    "outDir": "../project/reg-form/node_modules/passworder/lib",
+    "outDir": "./lib",
     "strict": true,
     "incremental": true,
     "moduleResolution": "node",

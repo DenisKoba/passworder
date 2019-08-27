@@ -1,6 +1,6 @@
 {
   "name": "passworder",
-  "version": "0.0.14",
+  "version": "0.0.16",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
@@ -18,5 +18,12 @@
     "typescript": "^3.5.3",
     "typescript-eslint-parser": "^22.0.0",
     "webpack": "^4.39.1"
-  }
+  },
+  "keywords": [
+    "password",
+    "passworder",
+    "generator",
+    "unique",
+    "generate"
+  ]
 }
