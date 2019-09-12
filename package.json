@@ -1,14 +1,14 @@
 {
   "name": "passworder",
-  "version": "0.0.16",
+  "version": "0.0.23",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "postinstall": "npm run build",
     "build": "tsc -p tsconfig.json",
     "webpack": "webpack --mode=production"
   },
   "files": [
+    "lib",
     "src",
     "tsconfig.json"
   ],

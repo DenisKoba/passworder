@@ -11,9 +11,9 @@ export const toUpperCase = (word: string): string => {
 
 export const passwordOptions = (params: string[]): customPasswordResponse => {
   return {
-    first: params.join(''),
-    second: passwordWithSplittedNumber(params),
-    third: params.reverse().join(''),
+    first: params.join('').replace(/ /gi, ''),
+    second: passwordWithSplittedNumber(params).replace(/ /gi, ''),
+    third: params.reverse().join('').replace(/ /gi, ''),
   }
 }
 
